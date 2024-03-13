@@ -13,38 +13,54 @@ body{
     background: var(--color-ternary);
 }
 /* **************************** */
-input{
-    position: absolute;
-}
-.aside{
-    width: 100%;
-    height: 40vh;
-    position: absolute;
-    background: var(--color-menu);
-
+.menu{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    left: -100%;
-}
-.aside ul{
     width: 100%;
-    height: 40vh;
+}
+.menus{
+    color: var(--color-secundary);
+    display: flex;
+    width: 100%;
     list-style: none;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    gap: 15px;
 }
-.aside ul li a{
-    transition: .5s ease;
+.menus a{
     text-decoration: none;
     color: var(--color-secundary);
 }
-.aside ul li a:hover{
-    color: var(--color-primary);
+.menus li{
+    color: var(--color-secundary);
+}
+.menus a:hover{
+    transition: 0.3s ease;
     scale: 1.2;
+    color: var(--color-primary);
+}
+.open-menu{
+    top: 20px;
+    right: 20px;
+    display: none;
+    position: absolute;
+    background: var(--color-primary);
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10%;
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+    display: none;
+    position: absolute;
+    width: 40px;
+    font-size: 35px;
+    height: 40px;
+    border-radius: 10%;
+    color: var(--color-primary);
+}
+#check{
+    display: none;
 }
 /* ********************************** */
 main{
@@ -59,6 +75,7 @@ header{
     display: grid;
     width: 90%;
     height: 3rem;
+    padding-top: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     box-sizing: border-box;
@@ -67,42 +84,6 @@ header h2{
     color: var(--color-primary);
     font-size: 2rem;
     font-weight: normal;
-}
-header ul{
-    width: 100%;
-    font-size: 1.2rem;
-    height:auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    color: var(--color-secundary);
-    font-weight: bold;
-    visibility: visible;
-}
-header div{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-}
-header i{
-    width: 30px;
-    position: absolute;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    background: var(--color-primary);
-    color: var(--color-ternary);
-    padding: 2px;
-    box-sizing: border-box;
-    right: 1.3rem;
-    top: .8rem;
-    visibility: hidden;
-    z-index: 2;
 }
 main section{
     margin-top: 2rem;
@@ -150,40 +131,40 @@ main section .image img{
 }
 /* ************************************** */
 
-.About{
+#About{
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.About section{
+#About section{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
 }
-.About section .about_image{
+#About section .about_image{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.About section .about_image img{
+#About section .about_image img{
     width: 80%;
 }
-.About section .about_text{
+#About section .about_text{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.About section .about_text h3{
+#About section .about_text h3{
     color: var(--color-primary);
     font-size: 15px;
     font-weight: normal;
     margin-bottom: 15px;
 }
-.About section .about_text h1{
+#About section .about_text h1{
     width: 100%;
     color: var(--color-secundary);
     font-size: 30px;
@@ -191,14 +172,14 @@ main section .image img{
     line-height: 40px;
     margin-bottom: 15px;
 }
-.About section .about_text p{
+#About section .about_text p{
     width: fit-content;
     color: var(--color-secundary);
     font-size: 20px;
     line-height: 23px;
     margin-bottom: 15px;
 }
-.About section .about_text button{
+#About section .about_text button{
     width: max-content;
     font-size: 1rem;
     padding: .3rem .7rem;
@@ -209,21 +190,21 @@ main section .image img{
 }
 /* ******************************************** */
 
-.Menu{
+#Menu{
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Menu section{
+#Menu section{
     width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.Menu section .menu_text{
+#Menu section .menu_text{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -231,26 +212,26 @@ main section .image img{
     align-items: center;
     margin-bottom: 40px;
 }
-.Menu section .menu_text h3{
+#Menu section .menu_text h3{
     color: var(--color-primary);
     font-weight: normal;
     font-size: 15px;
 }
-.Menu section .menu_text h1{
+#Menu section .menu_text h1{
     color: var(--color-secundary);
     font-size: 30px;
     font-weight: normal;
     text-align: center;
     line-height: 27px;
 }
-.Menu section .menu_image{
+#Menu section .menu_image{
     width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-gap: 30px;
 }
-.Menu section .menu_image .menu_box{
+#Menu section .menu_image .menu_box{
     width: 100%;
     height: 51vh;
     background: var(--color-box);
@@ -259,35 +240,35 @@ main section .image img{
     justify-content: center;
     align-items: center;
 }
-.Menu section .menu_image .menu_box img{
+#Menu section .menu_image .menu_box img{
     width: 60%;
 }
-.Menu section .menu_image .menu_box h2{
+#Menu section .menu_image .menu_box h2{
     font-weight: normal;
     font-size: 20px;
 }
-.Menu section .menu_image .menu_box label{
+#Menu section .menu_image .menu_box label{
     color: var(--color-primary);
     font-size: 14px;
 }
 
 /* ******************************************* */
 
-.Service{
+#Service{
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Service section{
+#Service section{
     width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.Service section .service_text{
+#Service section .service_text{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -295,53 +276,53 @@ main section .image img{
     align-items: center;
     margin-bottom: 40px;
 }
-.Service section .service_text h3{
+#Service section .service_text h3{
     color: var(--color-primary);
     font-weight: normal;
     font-size: 15px;
 }
-.Service section .service_text h1{
+#Service section .service_text h1{
     color: var(--color-secundary);
     font-size: 30px;
     font-weight: normal;
     text-align: center;
     line-height: 27px;
 }
-.Service section .service_items{
+#Service section .service_items{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-gap: 30px;
 }
-.Service section .service_items .service_box{
+#Service section .service_items .service_box{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.Service section .service_items .service_box img{
+#Service section .service_items .service_box img{
     width: 60%;
 }
-.Service section .service_items .service_box h2{
+#Service section .service_items .service_box h2{
     color: var(--color-primary);
 }
-.Service section .service_items .service_box p{
+#Service section .service_items .service_box p{
     color: var(--color-secundary);
     font-size: 16px;
     text-align: center;
 }
 /* ****************************************** */
 
-.Learn{
+#Learn{
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Learn section{
+#Learn section{
     width: 85%;
     height: 55vh;
     background: var(--color-box);
@@ -350,14 +331,14 @@ main section .image img{
     justify-content: center;
     align-items: center;
 }
-.Learn section h1{
+#Learn section h1{
     width: 40%;
     font-size: 30px;
     font-weight: normal;
     text-align: center;
     margin-bottom: 20px;
 }
-.Learn section button{
+#Learn section button{
     width: max-content;
     font-size: 1rem;
     padding: .3rem .7rem;
@@ -369,49 +350,52 @@ main section .image img{
 
 /* ********************************************** */
 
-.Contact{
+#Contact{
     width: 100%;
     min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Contact section{
+#Contact section{
     width: 75%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
 }
-.Contact section .Contact_box{
-    width: 100%;
+#Contact section .Contact_box{
+    width: fit-content;
     display: flex;
     flex-direction: column;
     list-style: none;
+    justify-content: center;
 }
-.Contact section .Contact_box ul{
+#Contact section .Contact_box ul{
     list-style: none;
 }
-.Contact section .Contact_box_icons, .Contact_box{
+#Contact section .Contact_box_icons, .Contact_box{
     width: fit-content;
     color: var(--color-secundary);
 }
-.Contact section .Contact_box h2{
+#Contact section .Contact_box h2{
     text-decoration: underline;
     text-decoration-color: var(--color-primary);
     font-weight: normal;
+    margin-bottom: 10px;
 }
-.Contact section .Contact_box_icons h2{
+#Contact section .Contact_box_icons h2{
     text-decoration: underline;
     text-decoration-color: var(--color-primary);
     font-weight: normal;
+    margin-bottom: 10px;
 }
-.Contact section .Contact_box_icons ul{
+#Contact section .Contact_box_icons ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.Contact section .Contact_box_icons ul li{
+#Contact section .Contact_box_icons ul li{
     background: var(--color-primary);
     width: 19px;
     height: 19px;
@@ -421,20 +405,39 @@ main section .image img{
     color: var(--color-other);
     border-radius: 50%;
 }
+#Contact section .Contact_box ul li a{
+    color: var(--color-secundary);
+    text-decoration: none;
+}
 
 /* **************************************** */
 
 @media (width < 800px){
-    .input:checked + .aside{
+    .menus{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50vh;
+        position: fixed;
+        gap: 3%;
+        top: -100%;
         left: 0;
+        z-index: 100;
+        background-color: var(--color-menu);
+        transition:  0.4s ease;
+    }
+    .menus li a{
+        color: var(--color-secundary);
+        font-size: 30px;
+    }
+    .open-menu, .close-menu{
+        display: block;
+    }
+    #check:checked~.menus{
+        top: 0;
     }
     /* *************************************************** */
-    header ul{
-        visibility: hidden;
-    }
-    header i{
-        visibility: visible;
-    }
     main{
         height: 90vh;
     }
@@ -454,55 +457,65 @@ main section .image img{
     }
     /* *********************************** */
 
-    .About section{
+    #About section{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
         
     }
-    .About section .about_image{
+    #About section .about_image{
         order: 2;
     }
-    .About section .about_image img{
+    #About section .about_image img{
         width: 100%;
     }
-    .About section .about_text{
+    #About section .about_text{
         order: 1;
         align-items: center;
         text-align: center;
     }
     /* **************************************** */
-    .Menu{
+    #Menu{
         margin-bottom: 100px;
     }
-    .Menu section .menu_image{
+    #Menu section .menu_image{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
-    .Menu section .menu_image .menu_box{
+    #Menu section .menu_image .menu_box{
         height: 35vh;
     }
-    .Menu section .menu_text h3{
+    #Menu section .menu_text h3{
         margin-bottom: 20px;
     }
     /* ****************************************** */
-    .Service section .service_items{
+    #Service section .service_items{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
     /* *********************************** */
-    .Learn{
-        height: 40vh;
+    #Learn{
+        height: 50vh;
     }
-    .Learn section{
+    #Learn section{
         height: 20vh;
     }
-    .Learn section h1{
+    #Learn section h1{
         width: 90%;
     }
     /* **************************** */
-    .Contact section{
+    #Contact section{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         grid-gap: 20px;
+    }
+    #Contact section .Contact_box_icons{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #Contact section .Contact_box_icons ul{
+        width: 40%;
     }
 }

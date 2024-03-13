@@ -8,27 +8,19 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <aside class="aside">
-        <ul>
-            <li><a href="#main">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="">Service</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-    </aside>
     <main id="main">
         <header>
             <h2>Foods</h2>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Menu</li>
-                <li>Service</li>
-                <li>Contact</li>
-            </ul>
-            <label for="casilla" class="input"><i class='bx bx-align-middle' undefined ></i></label>
-            <input class="input" type="checkbox" id="casilla">
+            <input type="checkbox" id="check">
+                <span class="menus">
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Menu">Menu</a></li>
+                    <li><a href="#Service">Service</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <label for="check" class="close-menu"><i class='bx bx-x' ></i></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class='bx bx-align-middle'></i></label>
         </header>
         <section>
             <div class="text">
@@ -39,7 +31,7 @@
             <div class="image"><img src="storage/img/home.png"></div>
         </section>
     </main>
-    <nav class="About">
+    <nav id="About">
         <section>
             <div class="about_image"><img src="storage/img/about.png"></div>
             <div class="about_text">
@@ -50,7 +42,7 @@
             </div>
         </section>
     </nav>
-    <nav class="Menu">
+    <nav id="Menu">
         <section>
             <div class="menu_text">
                 <h3>Food Menu</h3>
@@ -78,7 +70,7 @@
             </div>
         </section>
     </nav>
-    <nav class="Service">
+    <nav id="Service">
         <section>
             <div class="service_text">
                 <h3>Services</h3>
@@ -103,41 +95,41 @@
             </div>
         </section>
     </nav>
-    <nav class="Learn">
+    <nav id="Learn">
         <section>
             <h1>We make quality food Everyday</h1>
             <button>Learn More</button>
         </section>
     </nav>
-    <footer class="Contact">
+    <footer id="Contact">
         <section>
             <div class="Contact_box">
                 <h2>Menu Links</h2>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Menu</li>
-                    <li>Service</li>
-                    <li>Contact</li>
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Menu">Menu</a></li>
+                    <li><a href="#Service">Service</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </div>
             <div class="Contact_box">
                 <h2>Our Service</h2>
                 <ul>
-                    <li>Web Design</li>
-                    <li>Web Development</li>
-                    <li>Marketing</li>
-                    <li>Product Management</li>
-                    <li>Graphic Design</li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Product Management</a></li>
+                    <li><a href="#">Graphic Design</a></li>
                 </ul>
             </div>
             <div class="Contact_box">
                 <h2>Information</h2>
                 <ul>
-                    <li>About Us</li>
-                    <li>Delivery Information</li>
-                    <li>Privacy Policy</li>
-                    <li>Terms & Conditions</li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div class="Contact_box_icons">
