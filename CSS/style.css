@@ -4,13 +4,12 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    scroll-behavior: smooth;
 }
-
 body{
     width: 100%;
     background: var(--color-ternary);
+    overflow-y: scroll;
 }
 /* **************************** */
 .menu{
@@ -119,6 +118,11 @@ main section .text button{
     background: var(--color-primary);
     border: none;
     border-radius: 1px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+main section .text button:hover{
+    scale: 1.1;
 }
 main section .image{
     width: 100%;
@@ -180,13 +184,19 @@ main section .image img{
     margin-bottom: 15px;
 }
 #About section .about_text button{
+    margin-top: 2rem;
     width: max-content;
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding: .3rem .7rem;
     color: var(--color-secundary);
     background: var(--color-primary);
     border: none;
     border-radius: 1px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+#About section .about_text button:hover{
+    scale: 1.1;
 }
 /* ******************************************** */
 
@@ -339,6 +349,8 @@ main section .image img{
     margin-bottom: 20px;
 }
 #Learn section button{
+    cursor: pointer;
+    transition: .5s ease;
     width: max-content;
     font-size: 1rem;
     padding: .3rem .7rem;
@@ -346,6 +358,9 @@ main section .image img{
     background: var(--color-primary);
     border: none;
     border-radius: 1px;
+}
+#Learn section button:hover{
+    scale: 1.1;
 }
 
 /* ********************************************** */
@@ -382,6 +397,15 @@ main section .image img{
     text-decoration-color: var(--color-primary);
     font-weight: normal;
     margin-bottom: 10px;
+}
+#Contact section .Contact_box ul li{
+    transition: .5s ease;
+}
+#Contact section .Contact_box ul li:hover{
+    scale: 1.1;
+}
+#Contact section .Contact_box ul li a:hover{
+    color: var(--color-primary);
 }
 #Contact section .Contact_box_icons h2{
     text-decoration: underline;
@@ -464,6 +488,7 @@ main section .image img{
     }
     #About section .about_image{
         order: 2;
+        margin-top: 10px;
     }
     #About section .about_image img{
         width: 100%;
