@@ -11,7 +11,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-ternary);
+    background: var(--color-ternary
+    );
 }
 main{
     width: 90%;
