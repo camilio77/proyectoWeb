@@ -5,3 +5,107 @@
     margin: 0;
     font-family: "Montserrat", sans-serif;
 }
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-ternary);
+}
+main{
+    width: 90%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+}
+section{
+    width: 100%;
+    height: 85vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--color-font);
+    box-shadow: var(--color-shadow-transparent);
+    overflow-y: scroll;
+}
+section .title{
+    font-size: 20px;
+    width: 100%;
+}
+section .content{
+    width: 100%;
+    height: 77vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+}
+.box, .box1, .box2, .box3, .box4{
+    width: 90%;
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: var(--color-shadow-transparent);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: .2s ease;
+}
+.box{
+    background-image: url(../storage/img/camiseta_argentina.png);
+}
+.box:hover{
+    scale: 1.03;
+    background-image: url(../storage/img/camiseta_argentina_pre.png);
+    background-size: contain;
+}
+.box1{
+    background-image: url(../storage/img/camiseta_barca.png);
+}
+.box1:hover{
+    scale: 1.03;
+    background-image: url(../storage/img/camiseta_barca_pre.png);
+    background-size: contain;
+}
+.box2{
+    background-image: url(../storage/img/camiseta_liverpool.png);
+}
+.box2:hover{
+    scale: 1.03;
+    background-image: url(../storage/img/camiseta_liverpool_pre.png);
+    background-size: contain;
+}
+.box3{
+    background-image: url(../storage/img/camiseta_madrid.png);
+}
+.box3:hover{
+    scale: 1.03;
+    background-image: url(../storage/img/camiseta_madrid_pre.png);
+    background-size: contain;
+}
+.box4{
+    background-image: url(../storage/img/camiseta_psg.png);
+}
+.box4:hover{
+    scale: 1.03;
+    background-image: url(../storage/img/camiseta_psg_pre.png);
+    background-size: contain;
+}
+.box .text, .box1 .text, .box2 .text, .box3 .text, .box4 .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    border-radius: 5px;
+    background: var(--color-font);
+}
