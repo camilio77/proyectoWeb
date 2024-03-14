@@ -11,8 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-ternary
-    );
+    background: var(--color-font);
 }
 main{
     width: 90%;
@@ -23,42 +22,66 @@ main{
 }
 .menu{
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+.caja{
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--color-primary);
+    box-shadow: var(--color-shadow-transparent);
+}
+.menu h1 a{
+    font-size: 33px;
+    text-decoration: none;
+    color: var(--color-primary);
+}
 .menu ul{
     list-style: none;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.menu ul li i{
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+.mnenu ul li{
+    margin-bottom: 50px;
 }
 .menu li a{
     text-decoration: none;
     color: var(--color-font-secundary);
+    font-weight: bold;
 }
 section{
     width: 100%;
-    height: 85vh;
+    height: 80vh;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 30px;
     background: var(--color-font);
     box-shadow: var(--color-shadow-transparent);
     overflow-y: scroll;
 }
 section .title{
-    font-size: 20px;
+    font-size: 15px;
     width: 100%;
+    margin-top: 5px;
 }
 section .content{
     width: 100%;
-    height: 77vh;
+    height: 75vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 1fr;
-    grid-gap: 20px;
+    grid-gap: 5px;
 }
 .text{
     width: 100%;
@@ -78,16 +101,24 @@ section .content{
     font-style: italic;
 }
 .text div button{
-    background: var(--color-ternary);
+    padding: 4px;
+    box-shadow: var(--color-shadow-transparent);
+    border: 1.2px solid var(--color-font-secundary);
+    background: none;
     border-radius: 2px;
+    transition: .2s ease;
+}
+.text div button:hover{
+    scale: 1.1;
+    border: 1.2px solid var(--color-primary);
 }
 /* ******************************* */
 .box, .box1, .box2, .box3, .box4{
-    width: 90%;
+    width: 100%;
     height: 40vh;
     background-size: contain;
     background-repeat: no-repeat;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: var(--color-shadow-transparent);
     box-sizing: border-box;
     display: flex;
@@ -102,6 +133,8 @@ section .content{
 .box:hover{
     background-image: url(../storage/img/camiseta_argentina.png);
     background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
 }
 .box1{
     background-image: url(../storage/img/camiseta_boca_pre.png);
@@ -109,6 +142,8 @@ section .content{
 .box1:hover{
     background-image: url(../storage/img/camiseta_boca.png);
     background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
 }
 .box2{
     background-image: url(../storage/img/camiseta_colombia_pre.png);
@@ -116,6 +151,8 @@ section .content{
 .box2:hover{
     background-image: url(../storage/img/camiseta_colombia.png);
     background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
 }
 .box3{
     background-image: url(../storage/img/camiseta_madrid_pre.png);
@@ -123,6 +160,8 @@ section .content{
 .box3:hover{
     background-image: url(../storage/img/camiseta_madrid.png);
     background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
 }
 .box4{
     background-image: url(../storage/img/camiseta_juve_pre.png);
@@ -130,8 +169,150 @@ section .content{
 .box4:hover{
     background-image: url(../storage/img/camiseta_juve.png);
     background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
 }
 .box .text, .box1 .text, .box2 .text, .box3 .text, .box4 .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    border-radius: 5px;
+    background: var(--color-font);
+}
+/* ******************************* */
+.abox, .abox1, .abox2, .abox3, .abox4{
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    box-shadow: var(--color-shadow-transparent);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: .2s ease;
+}
+.abox{
+    background-image: url(../storage/img/chaqueta_argentina_pre.png);
+}
+.abox:hover{
+    background-image: url(../storage/img/chaqueta_argentina.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.abox1{
+    background-image: url(../storage/img/chaqueta_boca_pre.png);
+}
+.abox1:hover{
+    background-image: url(../storage/img/chaqueta_boca.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.abox2{
+    background-image: url(../storage/img/chaqueta_colombia_pre.png);
+}
+.abox2:hover{
+    background-image: url(../storage/img/chaqueta_colombia.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.abox3{
+    background-image: url(../storage/img/chaqueta_madrid_pre.png);
+}
+.abox3:hover{
+    background-image: url(../storage/img/chaqueta_madrid.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.abox4{
+    background-image: url(../storage/img/chaqueta_juve_pre.png);
+}
+.abox4:hover{
+    background-image: url(../storage/img/chaqueta_juve.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.abox .text, .abox1 .text, .abox2 .text, .abox3 .text, .abox4 .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    border-radius: 5px;
+    background: var(--color-font);
+}
+/* ******************************* */
+.pbox, .pbox1, .pbox2, .pbox3, .pbox4{
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    box-shadow: var(--color-shadow-transparent);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: .2s ease;
+}
+.pbox{
+    background-image: url(../storage/img/pantalon_argentina_pre.png);
+}
+.pbox:hover{
+    background-image: url(../storage/img/pantalon_argentina.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.pbox1{
+    background-image: url(../storage/img/pantalon_boca_pre.png);
+}
+.pbox1:hover{
+    background-image: url(../storage/img/pantalon_boca.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.pbox2{
+    background-image: url(../storage/img/pantalon_colombia_pre.png);
+}
+.pbox2:hover{
+    background-image: url(../storage/img/pantalon_colombia.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.pbox3{
+    background-image: url(../storage/img/pantalon_madrid_pre.png);
+}
+.pbox3:hover{
+    background-image: url(../storage/img/pantalon_madrid.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.pbox4{
+    background-image: url(../storage/img/pantalon_juve_pre.png);
+}
+.pbox4:hover{
+    background-image: url(../storage/img/pantalon_juve.png);
+    background-size: contain;
+    scale: 1.01;
+    border: 1px solid var(--color-primary);
+}
+.pbox .text, .pbox1 .text, .pbox2 .text, .pbox3 .text, .pbox4 .text{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
