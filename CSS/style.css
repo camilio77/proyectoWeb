@@ -21,6 +21,20 @@ main{
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
 }
+.menu{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu ul{
+    list-style: none;
+}
+.menu li a{
+    text-decoration: none;
+    color: var(--color-font-secundary);
+}
 section{
     width: 100%;
     height: 85vh;
@@ -42,14 +56,36 @@ section .content{
     width: 100%;
     height: 77vh;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 1fr;
     grid-gap: 20px;
 }
+.text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text h2{
+    font-size: 15px;
+    font-weight: 400;
+}
+.text div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 200;
+    font-style: italic;
+}
+.text div button{
+    background: var(--color-ternary);
+    border-radius: 2px;
+}
+/* ******************************* */
 .box, .box1, .box2, .box3, .box4{
     width: 90%;
     height: 40vh;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     border-radius: 5px;
     box-shadow: var(--color-shadow-transparent);
@@ -61,43 +97,38 @@ section .content{
     transition: .2s ease;
 }
 .box{
-    background-image: url(../storage/img/camiseta_argentina.png);
+    background-image: url(../storage/img/camiseta_argentina_pre.png);
 }
 .box:hover{
-    scale: 1.03;
-    background-image: url(../storage/img/camiseta_argentina_pre.png);
+    background-image: url(../storage/img/camiseta_argentina.png);
     background-size: contain;
 }
 .box1{
-    background-image: url(../storage/img/camiseta_barca.png);
+    background-image: url(../storage/img/camiseta_boca_pre.png);
 }
 .box1:hover{
-    scale: 1.03;
-    background-image: url(../storage/img/camiseta_barca_pre.png);
+    background-image: url(../storage/img/camiseta_boca.png);
     background-size: contain;
 }
 .box2{
-    background-image: url(../storage/img/camiseta_liverpool.png);
+    background-image: url(../storage/img/camiseta_colombia_pre.png);
 }
 .box2:hover{
-    scale: 1.03;
-    background-image: url(../storage/img/camiseta_liverpool_pre.png);
+    background-image: url(../storage/img/camiseta_colombia.png);
     background-size: contain;
 }
 .box3{
-    background-image: url(../storage/img/camiseta_madrid.png);
+    background-image: url(../storage/img/camiseta_madrid_pre.png);
 }
 .box3:hover{
-    scale: 1.03;
-    background-image: url(../storage/img/camiseta_madrid_pre.png);
+    background-image: url(../storage/img/camiseta_madrid.png);
     background-size: contain;
 }
 .box4{
-    background-image: url(../storage/img/camiseta_psg.png);
+    background-image: url(../storage/img/camiseta_juve_pre.png);
 }
 .box4:hover{
-    scale: 1.03;
-    background-image: url(../storage/img/camiseta_psg_pre.png);
+    background-image: url(../storage/img/camiseta_juve.png);
     background-size: contain;
 }
 .box .text, .box1 .text, .box2 .text, .box3 .text, .box4 .text{
