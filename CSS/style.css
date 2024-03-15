@@ -46,24 +46,51 @@ body{
     text-decoration: none;
     color: var(--color-primary);
 }
-.menuh .carrito{
+.menuh .carrito, .menuh .carrito1{
     position: absolute;
     right: 30px;
     top: 60px;
     list-style: none;
     color: var(--color-primary);
 }
+.carrito1 li a i{
+    color: var(--color-primary);
+}
 .carrito li div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.carrito1 li div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.carrito li a{
+    display: flex;
+}
+.carrito1 li a{
     display: flex;
 }
 .carrito li h4{
     margin-left: 10px;
 }
+.carrito1 li h4{
+    margin-left: 10px;
+}
 .carrito li i{
+    margin-right: 5px;
+}
+.carrito1 li i{
     margin-right: 5px;
 }
 .carrito li{
     display: flex;
+    flex-direction: row;
+}
+.carrito1 li{
+    display: flex;
+    flex-direction: row;
 }
 [articulos]::before{
     content: attr(articulos);
@@ -92,7 +119,8 @@ body{
     font-weight: bold;
 }
 footer{
-    position: absolute;
+    position:fixed;
+    background: var(--color-font);
     display: flex;
     justify-content: space-around;
     bottom: 0;
@@ -129,6 +157,11 @@ footer h2 i{
     justify-content: flex-end;
     text-align: center;
     font-size: 13px;
+}
+.menu2 li p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .todo{
     background-image: url(../storage/img/todo.jpg);
@@ -644,8 +677,21 @@ section .content{
     }
     .carrito{
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 30px;
+        right: 50px;
+        font-size: 50px;
+    }
+    .carrito h4{
+        display: none;
+    }
+    .menuh .carrito1{
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        font-size: 30px;
+    }
+    .menuh .carrito1 h4{
+        display: none;
     }
     .menuh .menu2{
         grid-template-columns: 1fr;
@@ -672,5 +718,25 @@ section .content{
     }
     section .content div div div{
         height: fit-content;
+    }
+    /* *************************** */
+    .carrito li div{
+        border: none;
+        box-shadow: none;
+    }
+    .ccontent{
+        height: 70vh;
+        grid-auto-rows: min-content;
+    }
+    .ccontent .text div{
+        width: 50px;
+        height: 50px;
+    }
+    .ccontent .text{
+        flex-wrap: wrap;
+    }
+    .ccontent .text div img{
+        width: 50px;
+        height: 50px;
     }
 }
