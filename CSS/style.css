@@ -7,12 +7,150 @@
 }
 body{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--color-font);
+    overflow-x: hidden;
 }
+/* ******************************** */
+
+.mainh{
+    width: 90%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menuh{
+    width: 90%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menuh header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menuh header p{
+    font-weight: 200;
+    font-style: italic;
+}
+.menuh header h1 a{
+    font-size: 50px;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+.menuh .carrito{
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    list-style: none;
+    color: var(--color-primary);
+}
+.carrito li div{
+    display: flex;
+}
+.carrito li h4{
+    margin-left: 10px;
+}
+.carrito li i{
+    margin-right: 5px;
+}
+.carrito li{
+    display: flex;
+}
+[articulos]::before{
+    content: attr(articulos);
+    color: var(--color-font-secundary);
+    padding: 2px;
+    border: 1px solid var(--color-primary);
+    font-weight: normal;
+    border-radius: 2px;
+}
+.menuh .menu2{
+    width: 100%;
+    list-style: none;
+    min-height: 55vh;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(10rem, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 10px;
+}
+.menuh .menu2 li i{
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+.menuh li a{
+    text-decoration: none;
+    color: var(--color-font-secundary);
+    font-weight: bold;
+}
+footer{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    box-shadow: var(--color-shadow-transparent);
+    padding: 4px;
+}
+footer h2{
+    font-size: 13px;
+}
+footer h2 i{
+    margin-right: 5px;
+    color: var(--color-primary);
+}
+.menu2 li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: var(--color-shadow-transparent);
+    transition: .5s ease;
+}
+.menu2 li:hover{
+    scale: 1.02;
+    border: 1px solid var(--color-primary);
+}
+.menu2 li div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    font-size: 13px;
+}
+.todo{
+    background-image: url(../storage/img/todo.jpg);
+    background-size: cover;
+}
+.chaquetas{
+    background-image: url(../storage/img/chaquetas.png);
+}
+.camisetas{
+    background-image: url(../storage/img/camisetas.jpg);
+}
+.pantalones{
+    background-image: url(../storage/img/pantalones.png);
+    background-size: cover;
+}
+.menu2 li div p{
+    height: 10vh;
+    background: var(--color-font);
+    box-shadow: var(--color-shadow-transparent);
+}
+
+/* ********************************* */
 main{
     width: 90%;
     height: 90vh;
@@ -34,11 +172,14 @@ main{
     box-shadow: var(--color-shadow-transparent);
 }
 .menu h1 a{
-    font-size: 33px;
+    font-size: 28px;
     text-decoration: none;
     color: var(--color-primary);
 }
-.menu ul{
+.menu h2{
+    font-size: 18px;
+}
+.menu .menu1{
     list-style: none;
     height: 30vh;
     display: flex;
@@ -101,7 +242,9 @@ section .content{
     font-style: italic;
 }
 .text div button{
-    padding: 4px;
+    font-size: 10px;
+    height: fit-content;
+    padding: 1px;
     box-shadow: var(--color-shadow-transparent);
     border: 1.2px solid var(--color-font-secundary);
     background: none;
@@ -112,6 +255,53 @@ section .content{
     scale: 1.1;
     border: 1.2px solid var(--color-primary);
 }
+/* ************************************** */
+
+.menu1{
+    color: var(--color-secundary);
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-around;
+    gap: 15px;
+}
+.menu1 a{
+    text-decoration: none;
+    color: var(--color-secundary);
+}
+.menu1 li{
+    color: var(--color-secundary);
+}
+.open-menu{
+    top: 45px;
+    right: 20px;
+    opacity: 0;
+    z-index: -10;
+    position: absolute;
+    background: var(--color-primary);
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 10%;
+}
+.close-menu{
+    top: 45px;
+    right: 20px;
+    opacity: 0;
+    z-index: -10;
+    position: absolute;
+    width: 40px;
+    font-size: 35px;
+    height: 40px;
+    border-radius: 10%;
+    color: var(--color-primary);
+}
+#check{
+    position: absolute;
+    opacity: 0;
+    z-index: -10;
+}
+
 /* ******************************* */
 .box, .box1, .box2, .box3, .box4{
     width: 100%;
@@ -321,4 +511,166 @@ section .content{
     height: 10vh;
     border-radius: 5px;
     background: var(--color-font);
+}
+/* ************************************ */
+.ccontent{
+    width: 100%;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-gap: 5px;
+}
+.opc{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.opc button{
+    background: var(--color-primary);
+    border-radius: 5px;
+    padding: 4px;
+    border: none;
+    box-shadow: var(--color-shadow-transparent);
+    color: var(--color-font);
+    transition: .2s ease;
+}
+.opc button:hover{
+    scale: 1.05;
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-font-secundary);
+    background: none;
+}
+.comprar{
+    width: fit-content;
+    display: flex;
+    box-shadow: var(--color-shadow-transparent);
+    padding: 10px;
+    border-radius: 5px;
+}
+.comprar div{
+    margin-right: 10px;
+    transition: .2s ease;
+}
+.comprar div label{
+    font-weight: 200;
+    font-style: italic;
+    font-size: 15px;
+}
+.cbox{
+    height: fit-content;
+    width: 100%;
+    padding: 10px;
+    box-shadow: var(--color-shadow-transparent);
+    border-radius: 5px;
+}
+.cbox .text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.cbox .text div{
+    width: 10%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+}
+.cbox .text input{
+    border: 1px solid var(--color-primary);
+    border-radius: 3px;
+}
+.cbox div img{
+    width: 100%;
+    border-radius: 5px;
+}
+.cbox .text button{
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    transition: .2s ease;
+}
+.cbox .text button i{
+    color: var(--color-primary);
+}
+.cbox .text button:hover{
+    scale: 1.2;
+}
+.sectionv{
+    width: 100%;
+    justify-content: flex-start;
+}
+.vacio{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+/* ************************************** */
+@media (width < 800px){
+    .menu1{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60vh;
+        position: fixed;
+        gap: 3%;
+        top: -100%;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        left: 0;
+        z-index: 100;
+        box-shadow: var(--color-shadow-transparent);
+        background: var(--color-font);
+        transition:  0.4s ease;
+    }
+    .menu1 li a{
+        color: var(--color-font-secundary);
+        font-size: 30px;
+    }
+    .open-menu, .close-menu{
+        opacity: 1;
+        z-index: 10;
+    }
+    #check:checked~.menu1{
+        top: 0;
+    }
+    /* *************************************************** */
+    .menu{
+        height: fit-content;
+    }
+    .carrito{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .menuh .menu2{
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+    }
+    section{
+        width: 85%;
+    }
+    section .content{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+    }
+    section .content div{
+        width: 100%;
+        height: 30vh;
+    }
+    section .content div div{
+        height: fit-content;
+    }
+    section .content div div div{
+        height: fit-content;
+    }
 }
