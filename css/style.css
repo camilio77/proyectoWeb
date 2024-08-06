@@ -164,17 +164,17 @@ footer h2 i{
     justify-content: center;
 }
 .todo{
-    background-image: url(../storage/img/todo.jpg);
+    background-image: url(/img/todo.jpg);
     background-size: cover;
 }
 .chaquetas{
-    background-image: url(../storage/img/chaquetas.png);
+    background-image: url(/img/chaquetas.png);
 }
 .camisetas{
-    background-image: url(../storage/img/camisetas.jpg);
+    background-image: url(/img/camisetas.jpg);
 }
 .pantalones{
-    background-image: url(../storage/img/pantalones.png);
+    background-image: url(/img/pantalones.png);
     background-size: cover;
 }
 .menu2 li div p{
@@ -351,46 +351,46 @@ section .content{
     transition: .2s ease;
 }
 .box{
-    background-image: url(../storage/img/camiseta_argentina_pre.png);
+    background-image: url(/img/camiseta_argentina_pre.png);
 }
 .box:hover{
-    background-image: url(../storage/img/camiseta_argentina.png);
+    background-image: url(/img/camiseta_argentina.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .box1{
-    background-image: url(../storage/img/camiseta_boca_pre.png);
+    background-image: url(/img/camiseta_boca_pre.png);
 }
 .box1:hover{
-    background-image: url(../storage/img/camiseta_boca.png);
+    background-image: url(/img/camiseta_boca.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .box2{
-    background-image: url(../storage/img/camiseta_colombia_pre.png);
+    background-image: url(/img/camiseta_colombia_pre.png);
 }
 .box2:hover{
-    background-image: url(../storage/img/camiseta_colombia.png);
+    background-image: url(/img/camiseta_colombia.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .box3{
-    background-image: url(../storage/img/camiseta_madrid_pre.png);
+    background-image: url(/img/camiseta_madrid_pre.png);
 }
 .box3:hover{
-    background-image: url(../storage/img/camiseta_madrid.png);
+    background-image: url(/img/camiseta_madrid.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .box4{
-    background-image: url(../storage/img/camiseta_juve_pre.png);
+    background-image: url(/img/camiseta_juve_pre.png);
 }
 .box4:hover{
-    background-image: url(../storage/img/camiseta_juve.png);
+    background-image: url(/img/camiseta_juve.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
@@ -421,46 +421,46 @@ section .content{
     transition: .2s ease;
 }
 .abox{
-    background-image: url(../storage/img/chaqueta_argentina_pre.png);
+    background-image: url(/img/chaqueta_argentina_pre.png);
 }
 .abox:hover{
-    background-image: url(../storage/img/chaqueta_argentina.png);
+    background-image: url(/img/chaqueta_argentina.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .abox1{
-    background-image: url(../storage/img/chaqueta_boca_pre.png);
+    background-image: url(/img/chaqueta_boca_pre.png);
 }
 .abox1:hover{
-    background-image: url(../storage/img/chaqueta_boca.png);
+    background-image: url(/img/chaqueta_boca.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .abox2{
-    background-image: url(../storage/img/chaqueta_colombia_pre.png);
+    background-image: url(/img/chaqueta_colombia_pre.png);
 }
 .abox2:hover{
-    background-image: url(../storage/img/chaqueta_colombia.png);
+    background-image: url(/img/chaqueta_colombia.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .abox3{
-    background-image: url(../storage/img/chaqueta_madrid_pre.png);
+    background-image: url(/img/chaqueta_madrid_pre.png);
 }
 .abox3:hover{
-    background-image: url(../storage/img/chaqueta_madrid.png);
+    background-image: url(/img/chaqueta_madrid.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .abox4{
-    background-image: url(../storage/img/chaqueta_juve_pre.png);
+    background-image: url(/img/chaqueta_juve_pre.png);
 }
 .abox4:hover{
-    background-image: url(../storage/img/chaqueta_juve.png);
+    background-image: url(/img/chaqueta_juve.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
@@ -491,46 +491,46 @@ section .content{
     transition: .2s ease;
 }
 .pbox{
-    background-image: url(../storage/img/pantalon_argentina_pre.png);
+    background-image: url(/img/pantalon_argentina_pre.png);
 }
 .pbox:hover{
-    background-image: url(../storage/img/pantalon_argentina.png);
+    background-image: url(/img/pantalon_argentina.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .pbox1{
-    background-image: url(../storage/img/pantalon_boca_pre.png);
+    background-image: url(/img/pantalon_boca_pre.png);
 }
 .pbox1:hover{
-    background-image: url(../storage/img/pantalon_boca.png);
+    background-image: url(/img/pantalon_boca.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .pbox2{
-    background-image: url(../storage/img/pantalon_colombia_pre.png);
+    background-image: url(/img/pantalon_colombia_pre.png);
 }
 .pbox2:hover{
-    background-image: url(../storage/img/pantalon_colombia.png);
+    background-image: url(/img/pantalon_colombia.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .pbox3{
-    background-image: url(../storage/img/pantalon_madrid_pre.png);
+    background-image: url(/img/pantalon_madrid_pre.png);
 }
 .pbox3:hover{
-    background-image: url(../storage/img/pantalon_madrid.png);
+    background-image: url(/img/pantalon_madrid.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);
 }
 .pbox4{
-    background-image: url(../storage/img/pantalon_juve_pre.png);
+    background-image: url(/img/pantalon_juve_pre.png);
 }
 .pbox4:hover{
-    background-image: url(../storage/img/pantalon_juve.png);
+    background-image: url(/img/pantalon_juve.png);
     background-size: contain;
     scale: 1.01;
     border: 1px solid var(--color-primary);

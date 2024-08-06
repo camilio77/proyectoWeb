@@ -1,0 +1,16 @@
+{
+  "name": "proyectoweb",
+  "version": "1.0.0",
+  "description": "![img](storage/img/2024-03-15_10-14-48.gif) ![img](storage/img/2024-03-15_10-16-27.gif)",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node --watch --env-file=.env main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
