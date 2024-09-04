@@ -2,31 +2,25 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+// Serve all static files from the root directory
 app.use(express.static(path.join(__dirname, 'css')));
 app.use(express.static(path.join(__dirname, 'storage')));
+app.use(express.static(path.join(__dirname, 'views')));
 
-app.get('/index', (req, res) => {
+// Serve the main index.html file
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get("/views/camisetas", (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views/camisetas.html'));
-})
+// Serve specific HTML files
+app.get('/views/:page', (req, res) => {
+    const page = req.params.page;
+    res.sendFile(path.join(__dirname, `views/${page}.html`));
+});
 
-app.get("/views/abrigos", (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views/abrigos.html'));
-})
+// Define port and host from environment variables or default
+let config = { port: process.env.PORT || 3000, host: process.env.HOST || 'localhost' };
 
-app.get("/views/todos", (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views/todos.html'));
-})
-
-app.get("/views/pantalones", (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views/pantalones.html'));
-})
-
-let config = {port: process.env.EXPRESS_PORT, host: process.env.EXPRESS_HOST}
-
-app.listen(config, ()=>{
+app.listen(config.port, () => {
     console.log(`Running at http://${config.host}:${config.port}`);
-})
+});
