@@ -1,0 +1,6 @@
+:root{
+    --color-primary: #EA526F;
+    --color-font: #fff;
+    --color-font-secundary: #000; 
+    --color-shadow-transparent:0px 0px 10px rgba(0, 0, 0, 0.216)
+}
